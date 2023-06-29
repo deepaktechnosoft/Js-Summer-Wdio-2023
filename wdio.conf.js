@@ -23,7 +23,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        'spec/Class1/sample.js'
+        'spec/Class2/UseLocators.js'
     ],
     // Patterns to exclude.
     exclude: [
