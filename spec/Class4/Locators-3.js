@@ -48,6 +48,21 @@
  *      function: getText()
  *      returns the text-value as a String
  * 
+ * --->    ...continued from spec/Class3/Locators-2.js
+ * 
+ * 5. To get if webElement is selected
+ *      function: isSelected()
+ *      if the webElement is selected
+ *          function returns true
+ *      otherwise
+ *          function returns false
+ * 
+ * 6. To get if webElement is enabled
+ *      function: isEnabled()
+ *      if the webElement is enabled
+ *          function returns true
+ *      otherwise
+ *          function returns false
  *      
  */
 
@@ -160,3 +175,63 @@
  *      Find the tag(tagName) in the dom where either text-value starts with "starting text value" OR attribute(attrName)-value contains "partial attr value"
  * 
  */
+// --->    ...continued from spec/Class3/Locators-2.js
+// Indirect xpath (Advanced xpath)
+/**
+ * 
+ * 1. chained-xpath (using parent/grandparent etc tags)
+ * 
+ *      eg:
+ *      //div[@jsinstance="1"]//div[text()]
+ *      //form[@class="search-form"]//input
+ *      
+ * 2. Xpath Axes
+ *  a) following-sibling (sibling-tags which apprearing in the dom after the tag)
+ *      //tagName[condition(s)]/following-sibling::tag2[condition(s)]
+ *      
+ *      eg:
+ *      //img[@data-tooltip="Driving"]/following-sibling::div[text()]
+ *      (//img[@data-tooltip="Driving"]/following-sibling::div)[1]
+ *      //img[@data-tooltip="Driving"]/following-sibling::div[@aria-hidden]
+ *      
+ *           
+ *  b) preceding-sibling (sibling-tags which apprearing in the dom before the tag)
+ *      //tagName[condition(s)]/preceding-sibling::tag2[condition(s)]
+ * 
+ *      eg:
+ *      //div[text()="Going to"]/preceding-sibling::button
+ * 
+ *  c) following (any starting-tags which apprearing in the dom after the tag)
+ *      //tagName[condition(s)]/following::tag2[condition(s)]
+ * 
+ *      eg:
+ *      //a[text()="Create a Page"]/following::a[text()="Log In"]
+ * 
+ * 
+ *  d) preceding (any starting-tags which apprearing in the dom before the tag)
+ *      //tagName[condition(s)]/preceding::tag2[condition(s)]
+ * 
+ *      eg:
+ *      //a[text()="Create a Page"]/preceding::a[text()="Log In"]
+ * 
+ *  e) parent (to go to parent-tag from child-tag)
+ *      //tagName[condition(s)]/parent::tag2[condition(s)]
+ * 
+ *      eg:
+ *      //img[@data-tooltip="Driving"]/parent::button
+ * 
+ *      .. can also be used like parent-axes
+ *      //img[@data-tooltip="Driving"]/..
+ *      
+ * 
+ * 
+ * 
+ *      //a[text()="Create a Page"]/preceding::*[text()="Log In"]   // using * instead tag-name -> anyTag
+ *      //form[@class="search-form"]//*
+ *      //img[@data-tooltip="Driving"]/following-sibling::*[text()]
+ * 
+ * 
+ * 
+ * 
+ */
+
