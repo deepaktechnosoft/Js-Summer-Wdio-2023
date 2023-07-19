@@ -30,6 +30,7 @@
 // Function to find WebElements using a locator
 /**
  * function: $$
+ * return: array of webElement
  */
 
 // Function to interact with WebElement:
